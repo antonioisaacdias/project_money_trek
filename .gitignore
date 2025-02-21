@@ -1,0 +1,60 @@
+__# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+config.py
+
+# Virtual environment
+venv/
+.env
+.venv/
+env/
+ENV/
+
+# Flask / Python environment variables
+*.env
+*.flaskenv
+
+# Logs
+logs/
+*.log
+
+# SQLite database
+instance/
+*.sqlite
+*.sqlite3
+*.db
+
+# Migrations
+migrations/
+
+# Pytest / Unit Test files
+.coverage
+.tox/
+nosetests.xml
+pytest_cache/
+
+# IDE / Editor Config Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebooks Checkpoints (caso use)
+.ipynb_checkpoints/
+
+# Cache files
+__pycache__/
+*.cache
+*.pytest_cache
+
+# Compiled files
+*.so
+
+# macOS / Windows specific files
+.DS_Store
+Thumbs.db
+
+# Pip dependency resolver
+pip-log.txt
+pip-delete-this-directory.txt

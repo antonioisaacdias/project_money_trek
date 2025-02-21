@@ -17,3 +17,7 @@ def login():
 @home_bp.route('/recuperar-senha', methods=['GET'])
 def recover_password():
     return render_template('recover-password.html')
+
+@home_bp.route('/quem-somos', methods=['GET'])
+def about_us():
+    return render_template('about-us.html')

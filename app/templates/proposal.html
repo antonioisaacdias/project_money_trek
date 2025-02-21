@@ -1,0 +1,33 @@
+
+{% extends 'ladingpage-base.html' %}
+{% block title %}Despesas{% endblock %}
+
+{% block content %}
+            <div class="container mt-5 form-proposal">
+                <h1>Solicitação de contato:</h1>
+                <div class="container rounded p-3 border">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Seu nome</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email corporativo</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="corporation_name" class="form-label">Nome da empresa</label>
+                            <input type="text" class="form-control" id="corporaton_name" name="corporation_name" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Deixe aqui sua mensagem</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="d-flex">
+                            <button type="submit" class="btn btn-lg btn-primary ms-auto">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+{% endblock %}

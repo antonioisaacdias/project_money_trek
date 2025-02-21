@@ -3,5 +3,9 @@ from flask import Blueprint, render_template
 home_bp = Blueprint('home', __name__, template_folder='app/templates')
 
 @home_bp.route('/')
-def home ():
+def home():
     return render_template('home.html')
+
+@home_bp.route('/solicite')
+def proposal():
+    return render_template('proposal.html')

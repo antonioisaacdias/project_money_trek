@@ -13,3 +13,7 @@ def proposal():
 @home_bp.route('/login', methods=['GET'])
 def login():
     return render_template('login.html')
+
+@home_bp.route('/recuperar-senha', methods=['GET'])
+def recover_password():
+    return render_template('recover-password.html')

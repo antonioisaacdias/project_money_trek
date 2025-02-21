@@ -2,10 +2,14 @@ from flask import Blueprint, render_template
 
 home_bp = Blueprint('home', __name__, template_folder='app/templates')
 
-@home_bp.route('/')
+@home_bp.route('/', methods=['GET'])
 def home():
     return render_template('home.html')
 
-@home_bp.route('/solicite')
+@home_bp.route('/solicite', methods=['GET'])
 def proposal():
     return render_template('proposal.html')
+
+@home_bp.route('/login', methods=['GET'])
+def login():
+    return render_template('login.html')

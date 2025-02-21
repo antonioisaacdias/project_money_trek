@@ -13,8 +13,6 @@
                 padding: 0;
                 box-sizing: border-box;
             }
-            
-
 
             body, html {
                 height: 100%;
@@ -31,22 +29,25 @@
             }
 
             main {
-                flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+                flex: 1;
             }
-
 
             .navbar-brand {
                 font-size: 1.5rem;
+                img {
+                    width: 3rem;
+                    margin-right: 1rem;
+                }
             }
 
             .navbar {
-                padding: 1rem 2rem; /* Aumenta a altura */
-                font-size: 1.2rem; /* Aumenta o tamanho do texto */
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
             }
 
 
             .image-container {
-                position: relative; /* Permite posicionar a overlay corretamente */
+                position: relative; 
                 width: 100%;
                 height: 100vh;
                 overflow: hidden;
@@ -65,12 +66,13 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.3); /* Camada escurecida */
-                backdrop-filter: blur(10px); /* Aplica o efeito de blur */
-                z-index: 2; /* Faz a overlay ficar acima da imagem */
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px); 
+                z-index: 2;
             }
 
-            .text-overlay {
+            .home{
+                .text-overlay {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -82,10 +84,21 @@
                 z-index: 3; /* Fica acima da overlay */
                 width: 80%; /* Ajusta a largura para melhor responsividade */
 
-                span {
-                    color: rgb(10, 177, 10);
+
+                p {
+                    font-style: italic;
+                    span {
+                        color: rgb(10, 177, 10);
+                    }
+
                 }
+
+
             }
+
+            }
+
+
 
             .text-box {
                 display: flex;
@@ -99,6 +112,16 @@
             .form-proposal {
                 max-width: 40rem;
             }
+
+            .form-login {
+                max-width: 30rem;
+                .logo-login {
+                    width: 7rem;
+                }
+            }
+
+
+
         </style>
 
     </head>
@@ -106,7 +129,10 @@
         <div class="full-height">
             <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
-                <a class="navbar-brand" href="/">Project Money Trek</a>
+                <a class="navbar-brand" href="/">
+                    <img class="" src="{{ url_for('static', filename='images/logo.svg') }}" alt="">
+                    Project Money Trek
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -121,7 +147,7 @@
                         <a class="nav-link active" aria-current="page" href="/">Início</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="/login">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Quem somos</a>
@@ -131,10 +157,6 @@
                         </li>
     
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Busca</button>
-                    </form>
                     </div>
                 </div>
                 </div>
